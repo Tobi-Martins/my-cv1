@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="CV of Olanbiwonninu Oluwanifemi Martins, Computer Science undergraduate and frontend developer.">
+	<title>Olanbiwonninu Oluwanifemi Martins | CV</title>
+	<style>
+		/* ---------- Base styles ---------- */
+		:root {
+			--ink: #17212b;
+			--muted: #64717d;
+			--line: #dbe3e8;
+			--paper: #ffffff;
+			--soft-blue: #edf5f7;
+			--accent: #0e7180;
+			--accent-dark: #09505d;
+			--warm: #e5a24e;
+		}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	html {
+		scroll-behavior: smooth;
+	}
+
+	body {
+		margin: 0;
+		color: var(--ink);
+		background: #e8eef0;
+		font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+		line-height: 1.6;
+	}
+
+	a {
+		color: var(--accent-dark);
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: var(--accent);
+		text-decoration: underline;
+	}
+
+	/* ---------- Page layout ---------- */
+	.resume {
+		max-width: 1120px;
+		margin: 42px auto;
+		background: var(--paper);
+		box-shadow: 0 18px 50px rgba(23, 33, 43, 0.12);
+	}
+
+	.hero {
+		position: relative;
+		padding: 58px 64px 46px;
+		overflow: hidden;
+		color: white;
+		background: linear-gradient(120deg, #123b4a 0%, #0c6b78 58%, #1596a0 100%);
+	}
+
+	.hero::after {
+		content: "";
+		position: absolute;
+		width: 260px;
+		height: 260px;
+		right: -70px;
+		top: -100px;
+		border: 34px solid rgba(255, 255, 255, 0.1);
+		border-radius: 50%;
+	}
+
+	.hero-content {
+		position: relative;
+		z-index: 1;
+		max-width: 760px;
+	}
+
+	.eyebrow {
+		margin: 0 0 13px;
+		color: #a9e3df;
+		font-size: 0.78rem;
+		font-weight: bold;
+		letter-spacing: 0.18em;
+		text-transform: uppercase;
+	}
+
+	h1,
+	h2,
+	h3,
+	p {
+		margin-top: 0;
+	}
+
+	h1 {
+		max-width: 700px;
+		margin-bottom: 10px;
+		font-family: Georgia, "Times New Roman", serif;
+		font-size: clamp(2.2rem, 5vw, 4.2rem);
+		line-height: 1.05;
+		letter-spacing: 0.01em;
+	}
+
+	.role {
+		margin-bottom: 0;
+		color: #e1f5f3;
+		font-size: 1.15rem;
+		font-weight: bold;
+	}
+
+	.contact-bar {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px 25px;
+		padding: 17px 64px;
+		color: #41515d;
+		border-bottom: 1px solid var(--line);
+		background: #f7fafb;
+		font-size: 0.9rem;
+	}
+
+	.contact-item {
+		display: inline-flex;
+		align-items: center;
+		gap: 8px;
+	}
+
+	.contact-item::before {
+		color: var(--warm);
+		content: "•";
+		font-size: 1.2rem;
+	}
+
+	.contact-bar a {
+		overflow-wrap: anywhere;
+	}
+
+	.content {
+		display: grid;
+		grid-template-columns: 1.5fr 0.85fr;
+		gap: 52px;
+		padding: 46px 64px 58px;
+	}
+
+	.main-column,
+	.side-column {
+		min-width: 0;
+	}
+
+	.section {
+		margin-bottom: 40px;
+	}
+
+	.section:last-child {
+		margin-bottom: 0;
+	}
+
+	.section-title {
+		display: flex;
+		align-items: center;
+		gap: 13px;
+		margin-bottom: 21px;
+		color: var(--accent-dark);
+		font-size: 0.83rem;
+		letter-spacing: 0.14em;
+		text-transform: uppercase;
+	}
+
+	.section-title::after {
+		height: 1px;
+		flex: 1;
+		background: var(--line);
+		content: "";
+	}
+
+	.summary {
+		max-width: 680px;
+		color: #3f4d57;
+		font-size: 1.03rem;
+	}
+
+	.entry {
+		position: relative;
+		padding: 0 0 25px 24px;
+		border-left: 2px solid #c7e1e3;
+	}
+
+	.entry:last-child {
+		padding-bottom: 0;
+	}
+
+	.entry::before {
+		position: absolute;
+		width: 9px;
+		height: 9px;
+		top: 5px;
+		left: -5.5px;
+		border: 3px solid var(--paper);
+		border-radius: 50%;
+		background: var(--accent);
+		box-shadow: 0 0 0 1px var(--accent);
+		content: "";
+	}
+
+	.entry h3 {
+		margin-bottom: 2px;
+		font-size: 1.08rem;
+	}
+
+	.entry-meta {
+		margin-bottom: 10px;
+		color: var(--accent);
+		font-size: 0.91rem;
+		font-weight: bold;
+	}
+
+	.entry p {
+		margin-bottom: 8px;
+		color: var(--muted);
+		font-size: 0.94rem;
+	}
+
+	.entry ul {
+		margin: 0;
+		padding-left: 18px;
+		color: #4b5963;
+		font-size: 0.92rem;
+	}
+
+	.entry li + li {
+		margin-top: 6px;
+	}
+
+	.side-column {
+		padding-left: 30px;
+		border-left: 1px solid var(--line);
+	}
+
+	.skill-group {
+		margin-bottom: 22px;
+	}
+
+	.skill-group h3 {
+		margin-bottom: 10px;
+		color: #364650;
+		font-size: 0.92rem;
+	}
+
+	.tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+
+	.tag {
+		padding: 5px 10px;
+		border: 1px solid #cbe3e5;
+		border-radius: 3px;
+		color: var(--accent-dark);
+		background: var(--soft-blue);
+		font-size: 0.82rem;
+	}
+
+	.details {
+		display: grid;
+		gap: 15px;
+		margin: 0;
+	}
+
+	.detail dt {
+		margin-bottom: 2px;
+		color: var(--muted);
+		font-size: 0.76rem;
+		font-weight: bold;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
+
+	.detail dd {
+		margin: 0;
+		font-size: 0.94rem;
+	}
+
+	.coursework {
+		color: #4b5963;
+		font-size: 0.9rem;
+	}
+
+	.footer-note {
+		padding: 18px 64px;
+		color: #6c7b84;
+		border-top: 1px solid var(--line);
+		background: #f7fafb;
+		font-size: 0.8rem;
+		text-align: center;
+	}
+
+	/* ---------- Responsive styles ---------- */
+	@media (max-width: 760px) {
+		.resume {
+			margin: 0;
+		}
+
+		.hero,
+		.contact-bar,
+		.content,
+		.footer-note {
+			padding-left: 24px;
+			padding-right: 24px;
+		}
+
+		.hero {
+			padding-top: 42px;
+			padding-bottom: 36px;
+		}
+
+		.content {
+			display: block;
+			padding-top: 36px;
+		}
+
+		.side-column {
+			margin-top: 42px;
+			padding-top: 36px;
+			padding-left: 0;
+			border-top: 1px solid var(--line);
+			border-left: 0;
+		}
+	}
+
+	@media print {
+		body {
+			background: white;
+		}
+
+		.resume {
+			width: 100%;
+			margin: 0;
+			box-shadow: none;
+		}
+
+		.hero {
+			print-color-adjust: exact;
+			-webkit-print-color-adjust: exact;
+		}
+
+		.entry,
+		.section {
+			break-inside: avoid;
+		}
+
+		a {
+			color: inherit;
+		}
+	}
+</style>
+</head>
+<body>
+	<main class="resume">
+		<header class="hero">
+			<div class="hero-content">
+				<p class="eyebrow">Curriculum Vitae</p>
+				<h1>Olanbiwonninu Oluwanifemi Martins</h1>
+				<p class="role">Computer Science Undergraduate | Frontend Developer | Aspiring AI/ML Engineer</p>
+			</div>
+		</header>
+
+	<div class="contact-bar" aria-label="Contact information">
+		<span class="contact-item">Lagos, Nigeria</span>
+		<a class="contact-item" href="tel:+2347026674759">+234 702 667 4759</a>
+		<a class="contact-item" href="mailto:tobimartins700@gmail.com">tobimartins700@gmail.com</a>
+		<a class="contact-item" href="https://github.com/Tobi-Martins" target="_blank" rel="noopener">GitHub</a>
+		<a class="contact-item" href="https://www.linkedin.com/in/tobi-martins-137582370/" target="_blank" rel="noopener">LinkedIn</a>
+	</div>
+
+	<div class="content">
+		<div class="main-column">
+			<section class="section">
+				<h2 class="section-title">Professional Summary</h2>
+				<p class="summary">First-Class Computer Science undergraduate at Lagos State University with a <strong>4.81/5.00 CGPA</strong> and a strong foundation in programming, mathematics, and computing. Experienced in frontend development through structured training and collaborative project work, with hands-on experience using HTML, CSS, JavaScript, Git, and GitHub. Also experienced in peer tutoring and explaining technical concepts to students. Currently developing toward a career in <strong>Artificial Intelligence and Machine Learning</strong> while continuing to strengthen frontend development skills.</p>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">Experience</h2>
+				<article class="entry">
+					<h3>Peer Tutor, CSC 101: Introduction to Computing</h3>
+					<div class="entry-meta">Lagos State University</div>
+					<ul>
+						<li>Tutored first-year students on fundamental computing concepts.</li>
+						<li>Prepared and explained course materials in a clear and accessible manner.</li>
+						<li>Helped students understand technical concepts through step-by-step explanations.</li>
+						<li>Supported students with their understanding of introductory computing topics.</li>
+					</ul>
+				</article>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">Projects</h2>
+				<article class="entry">
+					<h3>Frontend Capstone Project, Group 9</h3>
+					<div class="entry-meta">TS Academy | Frontend Development</div>
+					<ul>
+						<li>Collaborated with a development team to build a frontend web project.</li>
+						<li>Developed the video section as a dedicated area of responsibility.</li>
+						<li>Used HTML, CSS, and JavaScript to implement structure, styling, and functionality.</li>
+						<li>Used Git and GitHub for version control and collaborative development.</li>
+						<li>Contributed code through the team's collaborative GitHub workflow.</li>
+					</ul>
+				</article>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">Education</h2>
+				<article class="entry">
+					<h3>Lagos State University (LASU)</h3>
+					<div class="entry-meta">B.Sc. Computer Science | Lagos, Nigeria | 2024-2028</div>
+					<p><strong>300 Level</strong> | CGPA: <strong>4.81/5.00</strong> | First Class</p>
+					<p class="coursework"><strong>Relevant coursework:</strong> Object-Oriented Programming, Data Structure, Database Management Systems, Operating Systems, Discrete Mathematics, Computer Architecture, Assembly Language, Sequential Programming, Computer Hardware.</p>
+				</article>
+			</section>
+		</div>
+
+		<aside class="side-column">
+			<section class="section">
+				<h2 class="section-title">Technical Skills</h2>
+				<div class="skill-group">
+					<h3>Programming</h3>
+					<div class="tags"><span class="tag">JavaScript</span><span class="tag">C++(fundamentals)</span><span class="tag">SQL(fundamentals)</span><span class="tag">x86 Assembly(fundamentals)</span></div>
+				</div>
+				<div class="skill-group">
+					<h3>Web Development</h3>
+					<div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">Responsive Design</span></div>
+				</div>
+				<div class="skill-group">
+					<h3>Tools and Technologies</h3>
+					<div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Node.js</span><span class="tag">npm</span><span class="tag">Vite</span></div>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">Training</h2>
+				<div class="entry">
+					<h3>TS Academy</h3>
+					<div class="entry-meta">Frontend Development Program</div>
+					<p>Scholarship recipient. Completed structured training in HTML, CSS, JavaScript, Git, and GitHub, with practical experience from a collaborative capstone project.</p>
+				</div>
+			</section>
+
+			<section class="section">
+				<h2 class="section-title">Focus</h2>
+				<dl class="details">
+					<div class="detail">
+						<dt>Career focus</dt>
+						<dd>Artificial Intelligence &amp; Machine Learning<br>Frontend Development</dd>
+					</div>
+					<div class="detail">
+						<dt>Language</dt>
+						<dd>English</dd>
+					</div>
+				</dl>
+			</section>
+		</aside>
+	</div>
+
+	<footer class="footer-note">References and project details available upon request.</footer>
+</main>
+</body>
+</html>
